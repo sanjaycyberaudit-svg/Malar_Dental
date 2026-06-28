@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 42% 5%; /* deep dark navy #060C14 */
+  --foreground: 0 0% 98%; /* white */
+  --surface-dark: 210 38% 8%; /* slightly lighter dark #0A1520 */
+  --surface-light: 213 25% 96%; /* cool off-white #EEF2F7 */
+  --primary: 180 91% 39%; /* teal #0BB8B8 */
+  --primary-light: 180 70% 95%; /* pale teal tint #EBF9F9 */
+  --primary-foreground: 0 0% 100%;
+  --muted-foreground: 213 15% 55%; /* cool grey #7A8BA0 */
+  --border: 213 20% 90%; /* light border #DDE4EE */
+  --success: 142 71% 38%; /* green checkmarks */
+  --warning: 38 92% 50%; /* star rating gold */
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: hsl(var(--primary) / 0.25);
+  color: hsl(var(--foreground));
+}
+
+/* Thin, subtle scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--surface-dark));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.4);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
