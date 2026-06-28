@@ -20,6 +20,9 @@ export const site = {
     name: "Dr. Shantha Kumar",
     role: "Lead Dental Specialist",
     reviews: "★ 4.9 (40+ reviews)",
+    // TODO: add the real photo later — import it in src/lib/images.ts and set
+    // `photo: images.doctor`. While empty, a placeholder avatar is shown.
+    photo: "" as string,
   },
   nav: [
     { label: "Services", href: "#services" },

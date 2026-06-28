@@ -5,7 +5,6 @@
  * <Photo /> component degrades to a teal gradient if any image fails to load.
  */
 import heroImg from "../assets/img-hero.webp";
-import doctorImg from "../assets/img-doctor.webp";
 import teamImg from "../assets/img-team.webp";
 import photoCtaImg from "../assets/img-photo-cta.webp";
 
@@ -30,7 +29,6 @@ const u = (id: string, w = 1200, h = 900) =>
 export const images = {
   hero: heroImg,
   clinicInterior: u("1629909613654-28e377c37b09", 640, 480),
-  doctor: doctorImg,
   team: teamImg,
   photoCta: photoCtaImg,
 

@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
+import { User } from "lucide-react";
 import { Photo } from "../ui/Photo";
 import { Container } from "../ui/Container";
 import { SectionLabel } from "../ui/SectionLabel";
@@ -69,7 +70,16 @@ export function About() {
           className="mt-2 flex items-center gap-4"
         >
           <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full">
-            <Photo src={images.doctor} alt={site.doctor.name} />
+            {site.doctor.photo ? (
+              <Photo src={site.doctor.photo} alt={site.doctor.name} />
+            ) : (
+              <div
+                className="flex h-full w-full items-center justify-center bg-[hsl(var(--primary-light))] text-[hsl(var(--primary))]"
+                aria-label={`${site.doctor.name} — photo coming soon`}
+              >
+                <User className="h-6 w-6" />
+              </div>
+            )}
           </div>
           <div>
             <p className="text-[0.9rem] font-bold text-[hsl(var(--surface-dark))]">
